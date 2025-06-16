@@ -1,0 +1,28 @@
+# Byte‑compiled Python
+__pycache__/
+*.py[cod]
+
+# Virtual environment
+.venv/
+
+# macOS system files
+.DS_Store
+
+# IDE configs
+.idea/
+
+# Airflow metadata & logs
+airflow/airflow.db
+airflow/logs/
+
+# Local data outputs
+data/raw_logs/
+data/processed_logs/
+data/spark_checkpoints/
+
+# Kafka and Spark archives
+kafka.tgz
+spark.tgz
+
+# Misc
+*.log
