@@ -1,4 +1,4 @@
-# 🟥 Real‑Time ETL Pipeline  
+# 🔻 Real‑Time ETL Pipeline  
 *A real‑time ETL pipeline leveraging Kafka, Spark, Airflow, and Docker containers.*  
 
 ---
