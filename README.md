@@ -18,9 +18,31 @@ This pipeline automatically generates example log messages, sends them through K
 
 ---
 
-## 🎥 Demo  
-![Pipeline Demo](demo.gif)  
-*Placeholder GIF showing logs flowing through Kafka → Spark → Airflow.*
+## Demo / Screenshots
+
+Below are key screenshots demonstrating the pipeline in action.
+
+### 1. Airflow DAG Running
+![Airflow DAG Working](assets/airflow.png)
+*Airflow UI showing the `log_file_processor` DAG with tasks `run_producer`, `run_consumer`, and `process_raw_logs` all succeeding.*
+
+---
+
+### 2. Cleaned Data by Spark
+![Spark Cleaned Data](assets/sparkc.png)
+*Directory listing of cleaned JSON output under `data/processed_logs/cleaned`, produced by the Spark Structured Streaming job.*
+
+---
+
+### 3. Aggregated Metrics by Spark
+![Spark Metrics](assets/sparkm.png)
+*Directory listing of Parquet files under `data/processed_logs/metrics`, containing the 1-minute window aggregations.*
+
+---
+
+### 4. Raw Logs Stored
+![Raw Logs](assets/raw.png)
+*Directory listing of raw JSON log batches under `data/raw_logs`, showing files created by the Kafka consumer.*
 
 ---
 
