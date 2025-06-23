@@ -12,6 +12,11 @@ This pipeline automatically generates example log messages, sends them through K
 - 🐳 **Containerized Deployment:** Docker Compose spins up Kafka, Spark, Airflow, etc.
 
 ---
+## Architecture Diagram
+
+![Architecture](assets/architecture.png)
+
+---
 
 ## 🎥 Demo  
 ![Pipeline Demo](demo.gif)  
