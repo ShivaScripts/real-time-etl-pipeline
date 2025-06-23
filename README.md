@@ -4,6 +4,7 @@
 ---
 
 ## 📋 Summary  
+This pipeline automatically generates example log messages, sends them through Kafka, saves the raw logs, cleans and analyzes them with Spark, and is scheduled and monitored by Airflow.
 - 🔄 **Streaming Ingestion:** Apache Kafka ingests synthetic logs in real time.  
 - 🤖 **Data Generation:** Python `Faker` library creates realistic fake log entries.  
 - ⚡ **Stream Processing:** Spark Structured Streaming transforms and aggregates logs.  
