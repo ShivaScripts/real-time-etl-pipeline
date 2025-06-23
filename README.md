@@ -66,3 +66,41 @@ Below are key screenshots demonstrating the pipeline in action.
 ---
 
 ## 🗂️ Folder Structure  
+real_time_data_pipeline/
+│
+├── .gitignore
+├── requirements.txt
+├── docker-compose.yml         # (optional) for containerized Kafka/Spark/Airflow
+├── docker/                    # Dockerfiles, if any
+│   └── python-app/
+│       └── Dockerfile
+│
+├── src/                       # Application source code
+│   ├── producer/
+│   │   └── producer.py        # Kafka producer: generates synthetic logs via Faker
+│   ├── consumer/
+│   │   └── consumer.py        # Kafka consumer: writes raw JSON to data/raw_logs/
+│   └── sparkk/
+│       └── spark_streaming_consumer.py  # Spark Structured Streaming job
+│
+├── airflow/
+│   ├── dags/
+│   │   └── log_file_processor_dag.py    # Airflow DAG orchestrating tasks
+│   ├── webserver_config.py             # (optional) custom Airflow settings
+│   └── logs/                           # Airflow runtime logs
+│
+├── data/                       # Local data storage (or mounted volumes)
+│   ├── raw_logs/               # Raw JSON batches created by consumer
+│   └── processed_logs/
+│       ├── cleaned/            # Cleaned JSON output by Spark
+│       └── metrics/            # Parquet metrics by Spark
+│
+├── assets/                     # Documentation assets
+│   ├── architecture.png        # Architecture diagram
+│   ├── airflow.png             # Airflow DAG screenshot
+│   ├── sparkc.png              # Spark cleaned data screenshot
+│   ├── sparkm.png              # Spark metrics screenshot
+│   └── raw.png                 # Raw logs screenshot
+│
+└── README.md                   # This file
+
